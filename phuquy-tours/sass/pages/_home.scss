@@ -71,8 +71,26 @@
 
   height: 52rem;
 
+  @include respond(tab-port) {
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.6) 0%,
+        rgba($color-white, 0.6) 100%
+      ),
+      url("../img/nat-6.jpg");
+  }
+
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
